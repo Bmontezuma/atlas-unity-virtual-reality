@@ -1,6 +1,7 @@
+![Image](https://wallpaperaccess.com/full/3398009.jpg)
 # ***Intro to Virtual Reality Development in Unity***
 
-# ***Basic VR Interaction Experience***
+## ***Basic VR Interaction Experience***
 ## ***The Foundations of Immersive Interaction***
 # ***Background Context***
 Dive into the immersive world of Virtual Reality (VR) development with Unity! In the “Basic VR Interaction Experience” project, you’ll embark on an exciting journey to create a foundational VR environment. This project offers a hands-on approach to understanding and implementing various VR locomotion systems, interactive UI elements, and environmental design within Unity.
