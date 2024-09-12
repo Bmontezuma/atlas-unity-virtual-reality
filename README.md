@@ -84,7 +84,7 @@ At the end of this project, you should be able to confidently <u>explain explain
 - Free or paid external assets may be used in this project, provided that they are properly credited and you have received approval from your instructor.
 
 # ***Tasks***
-***0. VR Camera and Controller Configuration***
+#### ***0. VR Camera and Controller Configuration***
 
 Create a new project and configure it for VR by importing OpenXR and the XR Interaction Toolkit.
 
@@ -92,8 +92,58 @@ Then, set up your VR camera and controllers using the sample assets.
 
 Test the camera and controller set up in a VR environment to ensure accurate tracking and interaction.
 
-### ***Repo:***
+#### ***Repo:***
 
 ***GitHub repository:*** *atlas-unity-virtual-reality*\
 ***Directory:*** *intro-to-vr*
+
+#### ***1. Implement Teleportation Locomotion***
+
+Develop a teleportation system using raycasting for VR movement, allowing users to navigate the virtual environment effectively.
+
+- Develop a teleportation system using raycasting to enable user movement in the VR environment.
+- Implement a visual indicator for teleportation, such as an arc or marker showing the targeted destination.
+- Ensure the teleportation system is intuitive and comfortable for VR navigation.
+
+#### ***2. Implement Smooth Locomotion***
+
+Create a joystick/thumbstick-based smooth locomotion system for more natural and intuitive player movement in VR.
+
+- Create a smooth locomotion system using the joystick or thumbstick on VR controllers.
+- Implement features to prevent motion sickness, such as field-of-view reduction during movement.
+- Test for smooth and natural player movement within the VR environment.
+
+#### ***3. Basic Object Interaction***
+
+Design and script basic object interactions, such as picking up, moving, and dropping objects within the VR environment.
+
+- Script basic interactions with objects in the VR environment, such as grabbing, holding, moving, and releasing.
+- Clickable
+- Grabbable
+- Holding
+- Ensure interactions are realistic, with basic physics and feedback.
+- Create a variety of objects to interact with, demonstrating different interaction paradigms.
+
+#### ***4. Interactive UI Development***
+
+Develop VR-friendly UI elements that can be interacted with through VR controllers, focusing on pointer-based interactions.
+
+- Develop UI elements that are interactable in VR, such as buttons, sliders, and menus.
+- Ensure the UI is intuitive and seamlessly integrates into the VR experience.
+
+#### ***5. Integration and Testing***
+
+Integrate all systems (locomotion, object interaction, UI) into a cohesive VR experience and conduct comprehensive testing to ensure functionality.
+
+- Integrate all the developed systems (locomotion, object interaction, UI) into a unified VR experience.
+- Conduct thorough testing to ensure all components work seamlessly together.
+- Iterate on feedback and testing results to refine interactions and performance.
+
+#### ***6. Final Compilation and Testing***
+
+Compile the final project and conduct extensive tests on a VR platform, ensuring all interactions and systems perform as intended.
+
+- Compile the final VR project, ensuring it’s ready for deployment.
+- Conduct extensive tests on a VR platform, verifying that all interactions and systems perform as intended.
+- Document any known issues or limitations in the README file.
 
