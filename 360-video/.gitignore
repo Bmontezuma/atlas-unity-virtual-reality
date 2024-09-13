@@ -1,0 +1,95 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Aa]ssets/StreamingAssets/*.*
+UserSettings/
+.vscode/
+
+# Audio, Video, and other media files
+*.mp3
+*.wav
+*.ogg
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flac
+*.aac
+*.webm
+
+# 3D Models, Meshes, FBX, and other related files
+*.fbx
+*.obj
+*.dae
+*.3ds
+*.blend
+*.max
+*.c4d
+*.ma
+*.mb
+*.lwo
+*.stl
+*.ply
+*.skp
+*.bvh
+
+# TextMeshPro (TMP) files
+[Tt]extMesh Pro/
+*.asset
+*.sdf
+*.ttf
+*.otf
+
+# Unity build settings
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Auto-generated files by Unity
+*.pidb.meta
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# Ignore crash reports and log files
+sysinfo.txt
+crash/
+*.stacktrace
+
+# Ignore files created when files change (e.g., lock files, diff files)
+*.lock
+*.diff
+*.orig
+*.rej
+*.log
+
+# Ignore macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore temporary files specific to operating system
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Ignore JetBrains Rider project files
+.idea/
+
+# Ignore settings related to the Editor
+/Assets/Editor/UserSettings/
