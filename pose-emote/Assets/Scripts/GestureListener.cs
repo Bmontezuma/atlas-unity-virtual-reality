@@ -1,49 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;  // Input System for detecting VR gestures
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 
-public class GestureListener : MonoBehaviour
+public class GestureListener2D : MonoBehaviour
 {
-    public InputActionReference waveAction;        // Action for detecting wave gesture
-    public InputActionReference thumbsUpAction;    // Action for detecting thumbs up gesture
-    public InputActionReference facePalmAction;    // Action for detecting face palm gesture
+    public InputDeviceCharacteristics controllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
 
-    public Image reactionImage;                    // Reference to the UI Image component
-    public Sprite waveSprite;                      // Sprite for wave gesture
-    public Sprite thumbsUpSprite;                  // Sprite for thumbs up gesture
-    public Sprite facePalmSprite;                  // Sprite for face palm gesture
+    private InputDevice device;
+    
+    // Reference to the UI Image that will display the gesture reaction
+    public Image gestureReactionImage;  
 
-    void OnEnable()
+    // Sprite to show when the wave gesture is detected
+    public Sprite waveSprite;  
+
+    private bool isWaving = false;
+
+    void Start()
     {
-        waveAction.action.performed += OnWavePerformed;
-        thumbsUpAction.action.performed += OnThumbsUpPerformed;
-        facePalmAction.action.performed += OnFacePalmPerformed;
+        InitializeController();
     }
 
-    void OnDisable()
+    void InitializeController()
     {
-        waveAction.action.performed -= OnWavePerformed;
-        thumbsUpAction.action.performed -= OnThumbsUpPerformed;
-        facePalmAction.action.performed -= OnFacePalmPerformed;
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+
+        if (devices.Count > 0)
+        {
+            device = devices[0];
+        }
+        else
+        {
+            Debug.LogError("No VR controller found");
+        }
     }
 
-    // Method to handle wave gesture
-    void OnWavePerformed(InputAction.CallbackContext context)
+    void Update()
     {
-        reactionImage.sprite = waveSprite;  // Swap to wave image
+        if (!device.isValid)
+        {
+            InitializeController();
+        }
+
+        // Check for gesture input (e.g., a wave gesture, which we'll simulate as a button press for now)
+        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool isTriggerPressed) && isTriggerPressed && !isWaving)
+        {
+            // Wave gesture detected (replace this with actual gesture logic in the future)
+            isWaving = true;
+            ShowGestureReaction(waveSprite);  // Show the wave sprite
+        }
+
+        if (!isTriggerPressed && isWaving)
+        {
+            isWaving = false;
+            ShowGestureReaction(null);  // Reset the image (or set to default sprite)
+        }
     }
 
-    // Method to handle thumbs up gesture
-    void OnThumbsUpPerformed(InputAction.CallbackContext context)
+    // Function to change the image sprite based on the detected gesture
+    void ShowGestureReaction(Sprite sprite)
     {
-        reactionImage.sprite = thumbsUpSprite;  // Swap to thumbs up image
-    }
-
-    // Method to handle face palm gesture
-    void OnFacePalmPerformed(InputAction.CallbackContext context)
-    {
-        reactionImage.sprite = facePalmSprite;  // Swap to face palm image
+        if (gestureReactionImage != null)
+        {
+            gestureReactionImage.sprite = sprite;
+        }
+        else
+        {
+            Debug.LogError("Gesture Reaction Image not assigned!");
+        }
     }
 }
