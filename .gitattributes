@@ -1,4 +1,4 @@
 accessibility/Library/PackageCache/com.unity.sysroot.linux-x86_64@2.0.9/data~/payload.tar.7z -delta
 accessibility/Library/PackageCache/com.meta.xr.sdk.core@68.0.3/Plugins/MacOpenXR/OVRPlugin.dylib -delta
 accessibility/Library/ArtifactDB -delta
-accessibility/Library/PackageCache/com.unity.toolchain.win-x86_64-linux-x86_64@2.0.9/data~/payload.tar.7z -delta
+accessibility/Library/PackageCache/com.unity.toolchain.win-x86_64-linux-x86_64@2.0.9/data~/payload.tar.7z -deltals
